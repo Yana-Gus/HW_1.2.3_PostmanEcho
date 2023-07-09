@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class PostmanEchoTest {
 
     @Test
-    public void should () {
+    public void shouldReturnSomeData () {
         // Given - When - Then
 // Предусловия
         ResponseAwareMatcher<Response> equalTo;
@@ -23,7 +23,7 @@ public class PostmanEchoTest {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("Hello"))
+                .body("data", equalTo("some data"))
         ;
     }
 }
